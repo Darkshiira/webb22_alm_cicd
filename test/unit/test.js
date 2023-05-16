@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Calculator } = require('../routes/calc');
+const { Calculator } = require('../../routes/calc');
 
 describe('Array', function () {
   describe('#indexOf()', function () {
