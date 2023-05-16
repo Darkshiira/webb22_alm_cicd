@@ -20,4 +20,4 @@ jobs:
       - name: "Linting with ESLint"
         run: npm run lint
       - name: "Integration tests from supertest"
-        run: npm test:integration
+        run: npm run test:integration
