@@ -1,0 +1,16 @@
+name: Basic tests
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  Running-some-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Unit tests from Mocha"
+        run: npm run test
+      - name: "Linting with ESLint"
+        run: npm run lint
+      - name: "Integration tests from supertest"
+        run: npm run integration-test
