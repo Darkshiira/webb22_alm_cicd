@@ -1,2 +1,2 @@
 FROM nginx:1.23.4-alpine-slim
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY ../views/index.ejs /usr/share/nginx/html/index.html
