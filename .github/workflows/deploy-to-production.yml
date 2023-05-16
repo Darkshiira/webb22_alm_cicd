@@ -1,0 +1,12 @@
+name: When deploying to production
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  Running-some-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Shout-out
+        run: "echo now deploying to production"
