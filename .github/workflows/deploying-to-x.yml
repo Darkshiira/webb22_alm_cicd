@@ -1,0 +1,12 @@
+name: When deploying to test server
+on:
+  pull_request:
+    branches-ignore:
+      - main
+jobs:
+  Running-some-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Shout-out
+        run: "echo now deploying branch: $GITHUB_REF_NAME to the test server"
