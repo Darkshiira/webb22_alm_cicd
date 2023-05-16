@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: install packages
+        run: npm install
       - name: "Unit tests from Mocha"
         run: npm run test
       - name: "Linting with ESLint"
