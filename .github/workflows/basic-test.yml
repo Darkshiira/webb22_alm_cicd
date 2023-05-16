@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: install packages
-        run: npm install
+        run: npm run install
       - name: "Unit tests from Mocha"
         run: npm run test
       - name: "Linting with ESLint"
