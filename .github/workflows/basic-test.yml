@@ -18,6 +18,6 @@ jobs:
       - name: "Unit tests from Mocha"
         run: npm test
       - name: "Linting with ESLint"
-        run: npm lint
+        run: npm run lint
       - name: "Integration tests from supertest"
         run: npm integration:test
