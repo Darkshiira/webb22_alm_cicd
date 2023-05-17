@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-17T09:27:09.697Z",
+    "end": "2023-05-17T09:27:09.701Z",
+    "duration": 4
+  },
+  "tests": [
+    {
+      "title": "should return -1 when the value is not present",
+      "fullTitle": "Array #indexOf() should return -1 when the value is not present",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 3 when adding 1 and 2",
+      "fullTitle": "Array Calculator should return 3 when adding 1 and 2",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 1 when subtracting 2 from 3",
+      "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 1,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 6 when multiplying 2 and 3",
+      "fullTitle": "Array Calculator should return 6 when multiplying 2 and 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 2 when dividing 6 by 3",
+      "fullTitle": "Array Calculator should return 2 when dividing 6 by 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should return -1 when the value is not present",
+      "fullTitle": "Array #indexOf() should return -1 when the value is not present",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 3 when adding 1 and 2",
+      "fullTitle": "Array Calculator should return 3 when adding 1 and 2",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 1 when subtracting 2 from 3",
+      "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 1,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 6 when multiplying 2 and 3",
+      "fullTitle": "Array Calculator should return 6 when multiplying 2 and 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 2 when dividing 6 by 3",
+      "fullTitle": "Array Calculator should return 2 when dividing 6 by 3",
+      "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+  {
+    "all": false,
+    "include": [
+      "routes/calc.js"
+    ]
+  }

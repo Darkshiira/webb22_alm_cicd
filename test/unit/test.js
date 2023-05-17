@@ -13,5 +13,17 @@ describe('Array', function () {
       calc.add(1, 2);
       assert.equal(calc.giveResult(), 3);
     });
+    it('should return 1 when subtracting 2 from 3', function () {
+      calc.subtract(3, 2);
+      assert.equal(calc.giveResult(), 1);
+    });
+    it('should return 6 when multiplying 2 and 3', function () {
+      calc.multiply(2, 3);
+      assert.equal(calc.giveResult(), 6);
+    });
+    it('should return 2 when dividing 6 by 3', function () {
+      calc.divide(6, 3);
+      assert.equal(calc.giveResult(), 2);
+    });
   });
 });

@@ -8,9 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: install packages
+        run: npm install
       - name: "Unit tests from Mocha"
-        run: npm run test
+        run: npm test
       - name: "Linting with ESLint"
         run: npm run lint
       - name: "Integration tests from supertest"
-        run: npm run integration-test
+        run: npm run test:integration
+      - name: "Upload test results"
+        uses: actions/upload-artifact@v2
+        if: success() || failure()
+        with:
+          name: test-results
+          path: test-results
+      - name: "Coverage test"
+        run: npm run coverage
