@@ -40,4 +40,28 @@ calcRouter.get('/add', (req, res, next) => {
   res.send(`Result: ${calc.giveResult()}`);
 });
 
+calcRouter.get('/subtract', (req, res, next) => {
+  const value1 = parseInt(req.query.val[0], 10);
+  const value2 = parseInt(req.query.val[1], 10);
+  const calc = new Calculator();
+  calc.subtract(value1, value2);
+  res.send(`Result: ${calc.giveResult()}`);
+});
+
+calcRouter.get('/multiply', (req, res, next) => {
+  const value1 = parseInt(req.query.val[0], 10);
+  const value2 = parseInt(req.query.val[1], 10);
+  const calc = new Calculator();
+  calc.multiply(value1, value2);
+  res.send(`Result: ${calc.giveResult()}`);
+});
+
+calcRouter.get('/divide', (req, res, next) => {
+  const value1 = parseInt(req.query.val[0], 10);
+  const value2 = parseInt(req.query.val[1], 10);
+  const calc = new Calculator();
+  calc.divide(value1, value2);
+  res.send(`Result: ${calc.giveResult()}`);
+});
+
 module.exports = { calcRouter, Calculator };
