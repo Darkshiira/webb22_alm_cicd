@@ -7,30 +7,11 @@ jobs:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
     # Docker Hub image that `container-job` executes in
-    container: ghcr.io/darkshiira/webb22_alm_cicd:main
+    container:
+      image: ghcr.io/darkshiira/webb22_alm_cicd:main
 
-    # Service containers to run with `container-job`
-    services:
-      # Label used to access the service container
-      webb22_alm_cicd:
-        # Docker Hub image
-        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:3dc305ec00b214dc11202a146496573e30680f020c62ffdc4d90b82c1530759c
-        # Ports that service containers expose
-        ports:
-          # Port mapping
-          - 8080:8080
-          - 8081:8081
     # Job steps
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-          scope: "@root"
-      - name: Set custom npm cache directory
-        run: echo "export npm_config_cache=/github/home/.npm-cache" >> $GITHUB_ENV
-      - name: Install dependencies
-        run: npm install
       - name: Run selenium test on webb22_alm_cicd
         run: npm run wdio
