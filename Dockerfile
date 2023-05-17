@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm ci --only=production
 
+RUN npm install chromedriver --global
+
 COPY . .
 
 CMD ["node", "app.js"]
