@@ -5,8 +5,8 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-17T07:59:57.157Z",
-    "end": "2023-05-17T07:59:57.160Z",
+    "start": "2023-05-17T08:00:58.363Z",
+    "end": "2023-05-17T08:00:58.366Z",
     "duration": 3
   },
   "tests": [
@@ -50,7 +50,7 @@
       "title": "should return 2 when dividing 6 by 3",
       "fullTitle": "Array Calculator should return 2 when dividing 6 by 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -99,7 +99,7 @@
       "title": "should return 2 when dividing 6 by 3",
       "fullTitle": "Array Calculator should return 2 when dividing 6 by 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
