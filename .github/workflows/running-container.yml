@@ -29,4 +29,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run selenium test on webb22_alm_cicd
-        run: npm run wdio--baseUrl=http://localhost:8081
+        run: npm run wdio
