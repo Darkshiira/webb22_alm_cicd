@@ -6,7 +6,6 @@
     "start": "node ./bin/www",
     "lint-fix": "eslint --fix .",
     "lint": "eslint .",
-    "prepare": "husky install",
     "test": "mocha test/unit --recursive  --reporter json > test-results.json",
     "test:integration": "mocha test/integration",
     "cover:report": "nyc report --reporter=lcov --reporter=text",
