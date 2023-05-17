@@ -106,7 +106,7 @@ exports.config = {
     ['chromedriver', {
       // Path to Chromedriver binary
       // Adjust the path according to your project structure
-      executablePath: './node_modules/.bin/chromedriver',
+      executablePath: '/usr/bin/chromedriver',
     }],
   ],
   // Framework you want to run your specs with.
