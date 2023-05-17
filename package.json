@@ -10,7 +10,7 @@
     "test:integration": "mocha test/integration",
     "cover:report": "nyc report --reporter=lcov --reporter=text",
     "coverage": "nyc npm test && nyc npm run test:integration && npm run cover:report && nyc check-coverage  --statements 80 --branches 80 --functions 80 --lines 80",
-    "wdio": "wdio run ./wdio.conf.js --baseUrl 8081:8081"
+    "wdio": "npx wdio run wdio.conf.js --baseUrl 8081:8081"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
