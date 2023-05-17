@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-17T07:42:21.729Z",
-    "end": "2023-05-17T07:42:21.765Z",
-    "duration": 36
+    "start": "2023-05-17T07:59:57.157Z",
+    "end": "2023-05-17T07:59:57.160Z",
+    "duration": 3
   },
   "tests": [
     {
@@ -32,7 +32,7 @@
       "title": "should return 1 when subtracting 2 from 3",
       "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -81,7 +81,7 @@
       "title": "should return 1 when subtracting 2 from 3",
       "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
