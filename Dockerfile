@@ -9,10 +9,3 @@ RUN npm ci --only=production
 COPY . .
 
 CMD ["node", "app.js"]
-
-
-
-
-
-
-
