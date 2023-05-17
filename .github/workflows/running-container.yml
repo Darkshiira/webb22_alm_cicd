@@ -23,5 +23,12 @@ jobs:
 
     # Steps that `container-job` runs
     steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: install packages
+        run: npm install
       - name: Run selenium test on webb22_alm_cicd
         run: npx wdio run wdio.conf.js --baseUrl http://localhost:8080
