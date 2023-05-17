@@ -9,12 +9,21 @@ extends:
 overrides:
   - files:
       - test/*/*.js
+      - test/e2e/*/*.js
     rules:
       func-names: off
       prefer-arrow-callback: off
+  - files:
+      - test/e2e/*/*.js
+    rules:
+      class-methods-use-this: off
 parserOptions:
   ecmaVersion: latest
 rules: {
  'no-unused-vars': ['error', { argsIgnorePattern: 'next' }]
 }
+globals:
+  expect: true
+  browser: true
+
 
