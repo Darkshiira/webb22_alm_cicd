@@ -6,12 +6,14 @@ jobs:
   container-job:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
-    # Docker Hub image that `container-job` executes in
-    container:
-      image: ghcr.io/darkshiira/webb22_alm_cicd:main
 
     # Job steps
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm install
       - name: Run selenium test on webb22_alm_cicd
-        run: npm run wdio
+        run: docker run ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio
