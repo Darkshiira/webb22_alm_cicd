@@ -19,7 +19,7 @@ jobs:
         ports:
           # Port mapping
           - 8080:8080
-          - localhost:8081
+          - 8081:8081
     # Job steps
     steps:
       - uses: actions/checkout@v2
