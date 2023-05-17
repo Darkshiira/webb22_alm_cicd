@@ -1,35 +1,49 @@
-name: Running a container job
-on: push
+name: Selenium Test
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  container-job:
+  selenium-test:
     runs-on: ubuntu-latest
-    container: ghcr.io/darkshiira/webb22_alm_cicd:main
 
     services:
       webb22_alm_cicd:
-        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:5a549c6890d3911a2894d522e52c8ad8abd780dfe574f4a959bacd99fde24bee
+        image: ghcr.io/darkshiira/webb22_alm_cicd:main
         ports:
           - 8080:8080
           - 8081:8081
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 16
 
-      - name: Set npm cache directory
-        run: npm config set cache /github/home/.npm-cache
-
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Install WebDriverIO globally
-        run: npm install -g webdriverio
+      - name: Start container
+        run: |
+          docker create \
+            --name webb22_alm_cicd \
+            --network "github_network_${{ github.run_id }}" \
+            --network-alias webb22_alm_cicd \
+            -p 8080:8080 \
+            -p 8081:8081 \
+            ghcr.io/darkshiira/webb22_alm_cicd:main
 
-      - name: Run Selenium tests
+      - name: Start container in background
+        run: docker start webb22_alm_cicd
+
+      - name: Wait for container to start
+        run: sleep 10
+
+      - name: Run Selenium test
         run: npm run wdio
+
