@@ -26,6 +26,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
+          registry-url: https://registry.npmjs.org/
+          scope: "@root"
       - name: Set custom npm cache directory
         run: echo "export npm_config_cache=/github/home/.npm-cache" >> $GITHUB_ENV
       - name: Install dependencies
