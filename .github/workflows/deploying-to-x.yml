@@ -4,7 +4,7 @@ on:
     branches-ignore:
       - main
 jobs:
-  Running-some-tests:
+  Shout-out:
     runs-on: ubuntu-latest
 
     steps:

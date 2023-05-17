@@ -1,0 +1,27 @@
+name: Running a container job
+on: push
+
+jobs:
+  # Label of the container job
+  container-job:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: ghcr.io/darkshiira/webb22_alm_cicd:main
+
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      webb22_alm_cicd:
+        # Docker Hub image
+        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:d49faf5ae8d43195e5673085038aaf997ef31f1ef2e15e6f303d1aeaca3e2fe3
+        # Ports that service containers expose
+        ports:
+          # Port mapping
+          - 8080:8080
+          - 50000:50000
+
+    # Steps that `container-job` runs
+    steps:
+      - name: Run selenium test on webb22_alm_cicd
+        run: npx wdio run wdio.conf.js --baseUrl http://localhost:8080
