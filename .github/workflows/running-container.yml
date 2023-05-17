@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set npm cache directory
-        run: npm config set cache /github/home/.npm-cache
-
       - name: Install WebDriverIO globally
         run: npm install -g webdriverio
 
