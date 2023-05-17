@@ -5,8 +5,8 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-17T09:26:28.089Z",
-    "end": "2023-05-17T09:26:28.093Z",
+    "start": "2023-05-17T09:27:09.697Z",
+    "end": "2023-05-17T09:27:09.701Z",
     "duration": 4
   },
   "tests": [
@@ -14,7 +14,7 @@
       "title": "should return -1 when the value is not present",
       "fullTitle": "Array #indexOf() should return -1 when the value is not present",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -32,7 +32,7 @@
       "title": "should return 1 when subtracting 2 from 3",
       "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -63,7 +63,7 @@
       "title": "should return -1 when the value is not present",
       "fullTitle": "Array #indexOf() should return -1 when the value is not present",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -81,7 +81,7 @@
       "title": "should return 1 when subtracting 2 from 3",
       "fullTitle": "Array Calculator should return 1 when subtracting 2 from 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
