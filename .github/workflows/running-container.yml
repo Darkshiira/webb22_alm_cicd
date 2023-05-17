@@ -19,7 +19,7 @@ jobs:
         ports:
           # Port mapping
           - 8080:8080
-          - 50000:50000
+          - localhost:8081
     # Job steps
     steps:
       - uses: actions/checkout@v2
@@ -29,4 +29,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run selenium test on webb22_alm_cicd
-        run: npm run wdio --baseUrl 50000:50000
+        run: npm run wdio--baseUrl=http://localhost:8081
