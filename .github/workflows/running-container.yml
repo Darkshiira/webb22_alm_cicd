@@ -2,18 +2,34 @@ name: Running a container job
 on: push
 
 jobs:
-  # Label of the container job
   container-job:
-    # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
+    container: ghcr.io/darkshiira/webb22_alm_cicd:main
 
-    # Job steps
+    services:
+      webb22_alm_cicd:
+        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:3dc305ec00b214dc11202a146496573e30680f020c62ffdc4d90b82c1530759c
+        ports:
+          - 8080:8080
+          - 8081:8081
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 16
+
+      - name: Set npm cache directory
+        run: npm config set cache /github/home/.npm-cache
+
       - name: Install dependencies
         run: npm install
-      - name: Run selenium test on webb22_alm_cicd
-        run: docker run ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio
+
+      - name: Install WebDriverIO globally
+        run: npm install -g webdriverio
+
+      - name: Run Selenium tests
+        run: npm run wdio
