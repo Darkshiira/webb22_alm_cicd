@@ -14,7 +14,7 @@ jobs:
       # Label used to access the service container
       webb22_alm_cicd:
         # Docker Hub image
-        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:d49faf5ae8d43195e5673085038aaf997ef31f1ef2e15e6f303d1aeaca3e2fe3
+        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:3dc305ec00b214dc11202a146496573e30680f020c62ffdc4d90b82c1530759c
         # Ports that service containers expose
         ports:
           # Port mapping
@@ -22,14 +22,11 @@ jobs:
           - 50000:50000
     # Job steps
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can
-      # access it
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: 16
       - name: Install dependencies
         run: npm install
-      # Runs a single command using the runners shell
       - name: Run selenium test on webb22_alm_cicd
         run: npm run wdio --baseUrl http://localhost:8080
