@@ -9,7 +9,8 @@
     "prepare": "husky install",
     "test": "mocha test/unit --recursive  --reporter json > test-results.json",
     "test:integration": "mocha test/integration",
-    "coverage": "nyc npm run test && nyc npm run test:integration"
+    "cover:report": "nyc report --reporter=lcov --reporter=text",
+    "coverage": "nyc npm test && nyc npm run test:integration && npm run cover:report && nyc check-coverage  --statements 80 --branches 80 --functions 80 --lines 80"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
