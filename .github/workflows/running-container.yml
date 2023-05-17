@@ -20,15 +20,11 @@ jobs:
           # Port mapping
           - 8080:8080
           - 50000:50000
-  test-job:
-    runs-on: ubuntu-latest
+    # Job steps
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can
+      # access it
       - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - name: install packages
-        run: npm install
+      # Runs a single command using the runners shell
       - name: Run selenium test on webb22_alm_cicd
         run: npm run wdio --baseUrl http://localhost:8080
