@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-17T19:44:52.748Z",
-    "end": "2023-05-17T19:44:52.753Z",
-    "duration": 5
+    "start": "2023-05-17T19:58:02.443Z",
+    "end": "2023-05-17T19:58:02.446Z",
+    "duration": 3
   },
   "tests": [
     {
@@ -41,7 +41,7 @@
       "title": "should return 6 when multiplying 2 and 3",
       "fullTitle": "Array Calculator should return 6 when multiplying 2 and 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -90,7 +90,7 @@
       "title": "should return 6 when multiplying 2 and 3",
       "fullTitle": "Array Calculator should return 6 when multiplying 2 and 3",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
