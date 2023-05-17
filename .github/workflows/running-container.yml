@@ -26,8 +26,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - name: Set npm cache directory
-        run: npm config set cache /github/home/.npm-cache
+      - name: Set custom npm cache directory
+        run: echo "export npm_config_cache=/github/home/.npm-cache" >> $GITHUB_ENV
       - name: Install dependencies
         run: npm install
       - name: Run selenium test on webb22_alm_cicd
