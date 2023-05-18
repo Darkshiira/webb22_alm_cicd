@@ -13,6 +13,7 @@
     "wdio": "npx wdio run wdio.conf.js"
   },
   "dependencies": {
+    "ChromeDriver": "npm:chromedriver@^113.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
