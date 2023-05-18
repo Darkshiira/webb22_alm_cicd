@@ -12,6 +12,9 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Run WDIO CLI Wizard
+        run: npx wdio config
+
       - name: Run Selenium tests in the Docker container
         run: |
           docker run -d --name my-container ghcr.io/darkshiira/webb22_alm_cicd:main
