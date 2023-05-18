@@ -5,8 +5,8 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2023-05-18T19:05:48.757Z",
-    "end": "2023-05-18T19:05:48.761Z",
+    "start": "2023-05-18T19:46:08.397Z",
+    "end": "2023-05-18T19:46:08.401Z",
     "duration": 4
   },
   "tests": [
@@ -23,7 +23,7 @@
       "title": "should return 3 when adding 1 and 2",
       "fullTitle": "Array Calculator should return 3 when adding 1 and 2",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
@@ -72,7 +72,7 @@
       "title": "should return 3 when adding 1 and 2",
       "fullTitle": "Array Calculator should return 3 when adding 1 and 2",
       "file": "C:\\Users\\darks\\OneDrive\\Skrivbord\\ApplicationLifecycleManagment\\webb22_alm_cicd\\test\\unit\\test.js",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "speed": "fast",
       "err": {}
