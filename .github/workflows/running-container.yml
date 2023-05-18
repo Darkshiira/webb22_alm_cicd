@@ -1,38 +1,19 @@
-name: Running a container job with selenium test
+name: Running tests in a Docker container
 on: push
 
 jobs:
   container-job:
     runs-on: ubuntu-latest
-    container: ghcr.io/darkshiira/webb22_alm_cicd:main
-
-    services:
-      webb22_alm_cicd:
-        image: ghcr.io/darkshiira/webb22_alm_cicd:main
-        ports:
-          - 8080:8080
-          - 8081:8081
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-
-      - name: Set npm cache directory
-        run: npm config set cache /github/home/.npm-cache
-
-      - name: Install dependencies
+      - name: Installing dependencies
         run: npm install
 
-      - name: Install the right version of ChromeDriver
-        run: npm install ChromeDriver@113.0.5672.63
-
-      - name: Check Chrome version
-        run: google-chrome-stable --version
-
-      - name: Run Selenium tests
-        run: npm run wdio --spec ./test/e2e/specs/test.e2e.js
+      - name: Run Selenium tests in the Docker container
+        run: |
+          docker run -d --name my-container ghcr.io/darkshiira/webb22_alm_cicd:main
+          docker exec my-container npm run wdio --spec ./test/e2e/specs/test.e2e.js
+          docker stop my-container && docker rm my-container
