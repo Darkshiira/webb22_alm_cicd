@@ -86,7 +86,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: 'http://webb22_alm_cicd:8080',
+  baseUrl: '8080:8080',
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
