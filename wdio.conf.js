@@ -1,7 +1,7 @@
 exports.config = {
   runner: 'local',
   specs: [
-    './test/e2e/specs/**/*.js',
+    './test/e2e/specs/*.e2e.js',
   ],
   exclude: [],
   maxInstances: 10,
