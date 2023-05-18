@@ -8,6 +8,10 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome',
+      'goog:chromeOptions': {
+        // Add this line to specify the port number for Chromedriver
+        args: ['--port=9516'],
+      },
     },
   ],
   logLevel: 'info',
