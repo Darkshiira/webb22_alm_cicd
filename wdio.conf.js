@@ -8,10 +8,6 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome',
-      'goog:chromeOptions': {
-        // Add this line to specify the port number for Chromedriver
-        args: ['--port=9516'],
-      },
     },
   ],
   logLevel: 'info',
@@ -21,7 +17,9 @@ exports.config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: [
-    'chromedriver', { port: 9516 },
+    ['chromedriver', {
+      port: 9516,
+    }],
   ],
   framework: 'mocha',
   reporters: ['spec'],
