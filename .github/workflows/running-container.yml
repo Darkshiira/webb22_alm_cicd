@@ -8,7 +8,7 @@ jobs:
 
     services:
       webb22_alm_cicd:
-        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:6f99f478530041eb0a8b161b1514cc471818e372ebd008ab946e1e03d35b5bdc
+        image: ghcr.io/darkshiira/webb22_alm_cicd:main
         ports:
           - 8080:8080
           - 8081:8081
