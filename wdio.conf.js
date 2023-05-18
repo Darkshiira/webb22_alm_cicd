@@ -103,7 +103,7 @@ exports.config = {
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
   services: [
-    ['chromedriver', { executablePath: '/__w/webb22_alm_cicd/webb22_alm_cicd/node_modules/chromedriver' }],
+    ['chromedriver'],
   ],
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
