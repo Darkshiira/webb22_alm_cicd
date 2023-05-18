@@ -8,7 +8,7 @@ jobs:
 
     services:
       webb22_alm_cicd:
-        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:5a549c6890d3911a2894d522e52c8ad8abd780dfe574f4a959bacd99fde24bee
+        image: ghcr.io/darkshiira/webb22_alm_cicd@sha256:e838d3a75aa9a2b2eeed39fed23bffb3edd90e5c096e777f1f7a3261fb13914f
         ports:
           - 8080:8080
           - 8081:8081
@@ -26,10 +26,10 @@ jobs:
         run: npm config set cache /github/home/.npm-cache
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Install WebDriverIO globally
-        run: npm install -g webdriverio
+      - name: Install the right version of ChromeDriver
+        run: npm install ChromeDriver@113.0.5672.63
 
       - name: Run Selenium tests
-        run: npm run wdio
+        run: npm run wdio --spec ./test/e2e/specs/test.e2e.js
