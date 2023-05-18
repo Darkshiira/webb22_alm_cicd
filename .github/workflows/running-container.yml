@@ -28,5 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install the right version of ChromeDriver
+        run: npm install ChromeDriver@113.0.5672.63
+
       - name: Run Selenium tests
         run: npm run wdio --spec ./test/e2e/specs/test.e2e.js
