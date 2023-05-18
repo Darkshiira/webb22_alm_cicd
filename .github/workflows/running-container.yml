@@ -31,5 +31,8 @@ jobs:
       - name: Install the right version of ChromeDriver
         run: npm install ChromeDriver@113.0.5672.63
 
+      - name: Check Chrome version
+        run: google-chrome-stable --version
+
       - name: Run Selenium tests
         run: npm run wdio --spec ./test/e2e/specs/test.e2e.js
