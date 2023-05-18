@@ -13,7 +13,7 @@ jobs:
         run: npm install
 
       - name: Run Selenium tests in the Docker container
-        working-directory: ./wdio.conf.js
+        working-directory: ./
         run: |
           docker run -d --name my-container ghcr.io/darkshiira/webb22_alm_cicd:main
           docker exec my-container npm run wdio --spec ./test/e2e/specs/test.e2e.js
