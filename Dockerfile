@@ -27,5 +27,5 @@ RUN npm install chromedriver --global
 COPY . .
 
 # Start the application
-CMD ["node", "app.js"]
+CMD ["node", "./bin/www"]
 
