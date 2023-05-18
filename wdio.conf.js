@@ -17,7 +17,7 @@ exports.config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: [
-    'chromedriver',
+    'chromedriver', { chromedriverVersion: '10.1.0' },
   ],
   framework: 'mocha',
   reporters: ['spec'],
