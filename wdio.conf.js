@@ -17,7 +17,7 @@ exports.config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: [
-    'chromedriver',
+    'chromedriver', { binaryPath: './node_modules/chromedriver/lib/chromedriver/chromedriver' },
   ],
   framework: 'mocha',
   reporters: ['spec'],
