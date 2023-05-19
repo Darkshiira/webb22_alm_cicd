@@ -8,6 +8,10 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome',
+      'goog:chromeOptions': {
+        binary: '/usr/bin/google-chrome-stable',
+        args: ['--no-sandbox', '--disable-dev-shm-usage'],
+      },
     },
   ],
   logLevel: 'info',
@@ -19,6 +23,7 @@ exports.config = {
   services: [
     ['chromedriver', {
       port: 9516,
+      logFileName: 'wdio-chromedriver.log',
     }],
   ],
   framework: 'mocha',
