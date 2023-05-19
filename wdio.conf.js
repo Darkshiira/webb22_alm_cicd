@@ -19,7 +19,7 @@ exports.config = {
   services: [
     ['chromedriver', {
       port: 9516,
-      path: '/',
+      logFileName: 'wdio-chromedriver.log',
     }],
   ],
   framework: 'mocha',
