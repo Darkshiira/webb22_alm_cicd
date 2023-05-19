@@ -20,12 +20,11 @@ ENV CHROME_BIN=/usr/bin/google-chrome-stable
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies as the non-root user
+# Change ownership of the entire working directory to the non-root user
 RUN chown -R my-user:my-user /webb22_alm_cicd
-USER my-user
 
-# Create the user's home directory inside the working directory
-RUN mkdir /webb22_alm_cicd/home
+# Switch to the non-root user
+USER my-user
 
 # Install dependencies
 RUN npm install
