@@ -23,6 +23,14 @@ COPY package*.json ./
 # Install dependencies as the non-root user
 RUN chown -R my-user:my-user /webb22_alm_cicd
 USER my-user
+
+# Create a directory for the user
+RUN mkdir /home/my-user
+
+# Set ownership of the user directory
+RUN chown my-user:my-user /home/my-user
+
+# Install dependencies
 RUN npm install
 
 # Install Chromedriver globally
