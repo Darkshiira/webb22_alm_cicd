@@ -15,5 +15,5 @@ jobs:
       - name: Run Selenium tests in the Docker container
         run: |
           docker run -d --name my-container ghcr.io/darkshiira/webb22_alm_cicd:main
-          docker exec my-container npm run wdio --config ./wdio.conf.js --spec ./test/e2e/specs/test.e2e.js
+          docker exec my-container npx wdio run ./wdio.conf.js --spec ./test/e2e/specs/test.e2e.js
           docker stop my-container && docker rm my-container
