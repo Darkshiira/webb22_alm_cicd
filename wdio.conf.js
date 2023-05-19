@@ -9,13 +9,13 @@ exports.config = {
     {
       browserName: 'chrome',
       'goog:chromeOptions': {
-        binary: '/usr/bin/google-chrome',
+        binary: '/usr/bin/google-chrome-stable',
       },
     },
   ],
   logLevel: 'info',
   bail: 0,
-  baseUrl: 'http://host.docker.internal:3000',
+  baseUrl: 'http://localhost:3000',
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
