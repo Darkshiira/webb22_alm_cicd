@@ -13,7 +13,7 @@ jobs:
         run: npm install
 
       - name: Install wdio package
-        run: npm install wdio@6.0.1 --yes
+        run: npm install wdio@6.0.1 --legacy-peer-deps --yes
 
       - name: Run Selenium tests in the Docker container
         run: |
