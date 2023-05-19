@@ -8,6 +8,9 @@ exports.config = {
   capabilities: [
     {
       browserName: 'chrome',
+      'goog:chromeOptions': {
+        binary: '/usr/bin/google-chrome',
+      },
     },
   ],
   logLevel: 'info',
