@@ -12,8 +12,8 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
-      - name: Install wdio package
-        run: npm install wdio@6.0.1 --legacy-peer-deps --yes
+      - name: Initialize WDIO with create-wdio
+        run: npm init wdio ./
 
       - name: Run Selenium tests in the Docker container
         run: |
