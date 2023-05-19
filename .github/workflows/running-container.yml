@@ -12,14 +12,12 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
-      - name: Start the container
-        run: docker run -d --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
-
-      - name: Show running containers (before stop)
-        run: docker ps
-
-      - name: Stop and remove the container
-        run: docker stop my-container && docker rm my-container
-
-      - name: Show running containers (after stop)
-        run: docker ps
+      - name: Run Selenium tests in the Docker container
+        run: |
+          docker run --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
+          sleep 5s
+          docker exec my-container chown -R 1001:123 /root/.npm
+          docker exec my-container chown -R 1001:123 /root/.npm/_logs
+          echo "Test execution logs:"
+          docker logs my-container
+          docker stop my-container && docker rm my-container
