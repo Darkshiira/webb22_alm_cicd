@@ -27,10 +27,10 @@ RUN chown -R my-user:my-user /webb22_alm_cicd
 USER my-user
 
 # Create the home directory
-RUN mkdir /home/my-user
+RUN mkdir /webb22_alm_cicd/home
 
 # Set permissions for the home directory
-RUN chmod 755 /home/my-user
+RUN chmod 755 /webb22_alm_cicd/home
 
 # Install dependencies
 RUN npm install --unsafe-perm
