@@ -14,6 +14,7 @@ jobs:
 
       - name: Set permissions for npm cache
         run: docker run --rm -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main chmod -R 777 /root/.npm
+
         
       - name: Run Selenium tests in the Docker container
         run: |
