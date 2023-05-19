@@ -11,10 +11,6 @@ exports.config = {
       'goog:chromeOptions': {
         binary: '/usr/bin/google-chrome-stable',
         args: ['--no-sandbox', '--disable-dev-shm-usage'],
-        // Add the following line
-        'goog:chromeOptions': {
-          w3c: false,
-        },
       },
     },
   ],
