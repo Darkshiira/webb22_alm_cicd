@@ -26,6 +26,8 @@ RUN npm install chromedriver --global
 # Copy the rest of the application files
 COPY . .
 
+EXPOSE 8080
+
 # Start the application
 CMD ["node", "./bin/www"]
 
