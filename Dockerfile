@@ -26,11 +26,8 @@ RUN chown -R my-user:my-user /webb22_alm_cicd
 # Switch to the non-root user
 USER my-user
 
-# Create the home directory
-RUN mkdir /webb22_alm_cicd/home
-
-# Set permissions for the home directory
-RUN chmod 755 /webb22_alm_cicd/home
+# Set the npm cache directory to a location with write access
+ENV NPM_CONFIG_CACHE=/webb22_alm_cicd/.npm-cache
 
 # Install dependencies
 RUN npm install --unsafe-perm
