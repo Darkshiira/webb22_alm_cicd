@@ -18,4 +18,5 @@ jobs:
           sleep 10s
           echo "Test execution logs:"
           docker logs my-container
+          sudo chown -R 1001:123 "/root/.npm"
           docker stop my-container && docker rm my-container
