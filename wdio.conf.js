@@ -10,6 +10,7 @@ exports.config = {
       browserName: 'chrome',
       'goog:chromeOptions': {
         binary: '/usr/bin/google-chrome-stable',
+        args: ['--no-sandbox', '--disable-dev-shm-usage'],
       },
     },
   ],
