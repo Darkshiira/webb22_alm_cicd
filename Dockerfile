@@ -18,7 +18,7 @@ WORKDIR /webb22_alm_cicd
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm install
 
 # Install Chromedriver globally
 RUN npm install chromedriver --global
