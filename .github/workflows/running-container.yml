@@ -12,12 +12,13 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Set permissions for npm cache
+        run: docker run --rm -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main chmod -R 777 /root/.npm
+        
       - name: Run Selenium tests in the Docker container
         run: |
           docker run --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
           sleep 5s
-          docker exec my-container sudo chown -R 1001:123 "/root/.npm"
-          docker exec my-container sudo chown -R 1001:123 /root/.npm/_logs
           echo "Test execution logs:"
           docker logs my-container
           docker stop my-container && docker rm my-container
