@@ -18,7 +18,7 @@ jobs:
 
       - name: Show container logs
         run: |
-          sleep 10sec
+          sleep 10s
           docker logs my-container
 
       - name: Change npm cache ownership
