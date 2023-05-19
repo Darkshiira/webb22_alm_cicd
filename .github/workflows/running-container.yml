@@ -13,7 +13,7 @@ jobs:
         run: npm install
 
       - name: Initialize WDIO with create-wdio
-        run: npm init wdio ./
+        run: npm init wdio ./ --yes
 
       - name: Run Selenium tests in the Docker container
         run: |
