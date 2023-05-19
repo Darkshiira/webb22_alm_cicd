@@ -29,5 +29,5 @@ COPY . .
 EXPOSE 8080
 
 # Start the application
-CMD ["node", "./bin/www"]
+CMD ["node", "bin/www"]
 
