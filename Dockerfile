@@ -24,13 +24,8 @@ COPY package*.json ./
 RUN chown -R my-user:my-user /webb22_alm_cicd
 USER my-user
 
-# Create a directory with root permissions
-RUN mkdir /home/my-user
-
-# Set ownership of the user directory
-USER root
-RUN chown my-user:my-user /home/my-user
-USER my-user
+# Create the user's home directory inside the working directory
+RUN mkdir /webb22_alm_cicd/home
 
 # Install dependencies
 RUN npm install
