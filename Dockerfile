@@ -32,8 +32,8 @@ ENV NPM_CONFIG_CACHE=/webb22_alm_cicd/.npm-cache
 # Install dependencies
 RUN npm install --unsafe-perm
 
-# Install Chromedriver globally
-RUN npm install chromedriver --global
+# Install Chromedriver locally in the project directory
+RUN npm install chromedriver --unsafe-perm
 
 # Copy the rest of the application files
 COPY . .
