@@ -17,7 +17,9 @@ jobs:
           docker run -d --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
 
       - name: Show container logs
-        run: docker logs my-container
+        run: |
+          sleep 10sec
+          docker logs my-container
 
       - name: Change npm cache ownership
         run: docker exec my-container chown -R 1001:123 /root/.npm
