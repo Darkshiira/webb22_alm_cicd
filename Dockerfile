@@ -26,11 +26,9 @@ RUN chown -R my-user:my-user /webb22_alm_cicd
 # Switch to the non-root user
 USER my-user
 
-# Create the /home/my-user directory
-RUN mkdir /home/my-user
-
-# Change ownership of the home directory within the container
-RUN chown -R my-user:my-user /home/my-user
+# Create the /home/my-user directory and set permissions
+RUN mkdir -p /home/my-user && \
+    chown my-user:my-user /home/my-user
 
 # Install dependencies
 RUN npm install --unsafe-perm
