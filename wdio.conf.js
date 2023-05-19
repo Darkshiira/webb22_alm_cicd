@@ -12,7 +12,7 @@ exports.config = {
   ],
   logLevel: 'info',
   bail: 0,
-  baseUrl: 'http://webb22_alm_cicd:8080',
+  baseUrl: 'http://localhost:3000',
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
