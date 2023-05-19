@@ -15,8 +15,15 @@ jobs:
       - name: Run Selenium tests in the Docker container
         run: |
           docker run -d --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
-          sleep 10s
-          docker exec my-container chown -R 1001:123 /root/.npm
-          echo "Test execution logs:"
-          docker logs my-container
-          docker stop my-container && docker rm my-container
+
+      - name: Show container logs
+        run: docker logs my-container
+
+      - name: Change npm cache ownership
+        run: docker exec my-container chown -R 1001:123 /root/.npm
+
+      - name: Show updated container logs
+        run: docker logs my-container
+
+      - name: Remove the container
+        run: docker stop my-container && docker rm my-container
