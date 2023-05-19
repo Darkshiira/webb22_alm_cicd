@@ -12,20 +12,23 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
-      - name: Run Selenium tests in the Docker container
-        run: |
-          docker run -d --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
+      - name: Start the container
+        run: docker run -d --name my-container -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
 
-      - name: Show container logs
-        run: |
-          sleep 10s
-          docker logs my-container
-
-      - name: Change npm cache ownership
-        run: docker exec my-container chown -R 1001:123 /root/.npm
-
-      - name: Show updated container logs
+      - name: Show container logs (before chown)
         run: docker logs my-container
 
-      - name: Remove the container
+      - name: Change npm cache ownership
+        run: |
+          sleep 10s
+          docker exec my-container chown -R 1001:123 /root/.npm
+          docker exec my-container chown -R 1001:123 /root/.npm/_logs
+
+      - name: Show container logs (after chown)
+        run: docker logs my-container
+
+      - name: Stop and remove the container
         run: docker stop my-container && docker rm my-container
+
+      - name: Show container logs (after removal)
+        run: docker logs my-container
