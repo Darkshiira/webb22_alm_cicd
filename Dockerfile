@@ -27,7 +27,7 @@ RUN chown -R my-user:my-user /webb22_alm_cicd
 USER my-user
 
 # Change ownership of the home directory within the container
-RUN sudo chown -R my-user:my-user /home/my-user
+RUN chown -R my-user:my-user /home/my-user
 
 # Install dependencies
 RUN npm install --unsafe-perm
@@ -38,8 +38,9 @@ RUN npm install chromedriver --global
 # Copy the rest of the application files
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 # Start the application
 CMD ["node", "bin/www"]
+
 
