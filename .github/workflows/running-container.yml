@@ -12,6 +12,9 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
+      - name: Print Chrome version
+        run: google-chrome-stable --version
+
       - name: Run Selenium tests in the Docker container
         run: |
           docker run --name my-container -p 8080:3000 -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run wdio --spec test/e2e/specs/test.e2e.js
