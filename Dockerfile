@@ -27,7 +27,7 @@ RUN chown -R my-user:my-user /webb22_alm_cicd
 USER my-user
 
 # Install dependencies
-RUN npm install
+RUN npm install --unsafe-perm
 
 # Install Chromedriver globally
 RUN npm install chromedriver --global
