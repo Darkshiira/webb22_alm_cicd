@@ -12,7 +12,7 @@ jobs:
       - name: Installing dependencies
         run: npm install
 
-      - name: Run Selenium tests in the Docker container
+      - name: Run Selenium tests inside the Docker container
         run: |
           docker run --name my-container -p 8080:3000 -p 9516:9516 -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main npm run start && npm run wdio --spec test/e2e/specs/test.e2e.js
           sleep 5s
