@@ -1,4 +1,4 @@
-# Does not work, ignore this file! 
+# Does not work, ignore this file!
 
 name: Running tests in a Docker container
 on: push
@@ -18,7 +18,7 @@ jobs:
         run: |
           docker run --name my-container -p 8080:3000 -p 9516:9516 -v $PWD:/app -w /app ghcr.io/darkshiira/webb22_alm_cicd:main
           sleep 5s
-          docker exec my-container npm run wdio --spec test/e2e/specs/test.e2e.js
+          npm run wdio --spec test/e2e/specs/test.e2e.js
           echo "Test execution logs:"
           docker logs my-container
           docker stop my-container && docker rm my-container
